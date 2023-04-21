@@ -23,6 +23,14 @@ public class aftersignin extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        button = findViewById(R.id.track);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(aftersignin.this, track.class);
+                startActivity(intent);
+            }
+        });
 
     }
 }

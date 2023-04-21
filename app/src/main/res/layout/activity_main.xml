@@ -27,7 +27,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
-        android:text="File Anonymous complaint"
+        android:text="Sign Up/ Register"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
@@ -42,7 +42,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/round_button"
         android:layout_marginTop="248dp"
-        android:text="Sign Up / Log In"
+        android:text="Sign In / Log In"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
