@@ -7,28 +7,22 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class aftersignin extends AppCompatActivity {
+
     Button button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_aftersignin);
         getSupportActionBar().hide();
-        button = findViewById(R.id.button2);
+        button = findViewById(R.id.register);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, anonymousActivity.class);
+                Intent intent = new Intent(aftersignin.this, register_complaint.class);
                 startActivity(intent);
             }
         });
-        button = findViewById(R.id.button3);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, aftersignin.class);
-                startActivity(intent);
-            }
-        });
+
     }
 }
