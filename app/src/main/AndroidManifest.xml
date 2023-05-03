@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Cypics">
         <activity
+            android:name=".chat_screen"
+            android:exported="false" />
+        <activity
             android:name=".track"
             android:exported="false" />
         <activity

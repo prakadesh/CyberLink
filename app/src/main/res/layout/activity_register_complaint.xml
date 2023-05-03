@@ -17,7 +17,7 @@
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="36dp"
+            android:layout_marginTop="32dp"
             android:paddingTop="5dp"
             android:paddingBottom="5dp"
             android:text="Incident Occured In"
@@ -88,6 +88,84 @@
             app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
         <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="48dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="Additional Info"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/textView6"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="64dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="scenario"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/textView5"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        <TextView
+            android:id="@+id/predictionTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="64dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="API Response:"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/textView8"
+            app:layout_constraintTop_toBottomOf="@+id/textView8" />
+        <TextView
+            android:id="@+id/prediction1TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="Prediction 1:"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/predictionTextView"
+            app:layout_constraintTop_toBottomOf="@+id/predictionTextView"/>
+
+
+        <TextView
+            android:id="@+id/prediction2TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="Prediction 2:"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/prediction1TextView"
+            app:layout_constraintTop_toBottomOf="@+id/prediction1TextView" />
+        <TextView
+            android:id="@+id/ensemblePredictionTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="Ensemble Prediction:"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/prediction2TextView"
+            app:layout_constraintTop_toBottomOf="@+id/prediction2TextView" />
+
+        <TextView
             android:id="@+id/textView6"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
@@ -98,6 +176,8 @@
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@+id/textView7"
             app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+
 
         <EditText
             android:id="@+id/editTextTextPersonName"
@@ -142,6 +222,7 @@
             android:id="@+id/editTextTextMultiLine"
             android:layout_width="wrap_content"
             android:layout_height="48dp"
+            android:layout_marginStart="4dp"
             android:width="170dp"
             android:ems="10"
             android:gravity="start|top"
@@ -149,7 +230,73 @@
             android:inputType="textMultiLine"
             app:layout_constraintBottom_toBottomOf="@+id/textView5"
             app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName4"
-            app:layout_constraintTop_toTopOf="@+id/textView5" />
+            app:layout_constraintTop_toTopOf="@+id/textView5"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <EditText
+            android:id="@+id/editTextpredict"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginStart="4dp"
+            android:width="170dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="Enter your scenario "
+            android:inputType="textMultiLine"
+            app:layout_constraintBottom_toBottomOf="@+id/textView8"
+            app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName4"
+            app:layout_constraintTop_toTopOf="@+id/textView8"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/prediction1ResultTextView"
+            android:layout_width="158dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="4dp"
+            android:width="170dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:text="phishing"
+            android:textSize="16sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/prediction1TextView"
+            app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName4"
+            app:layout_constraintTop_toTopOf="@+id/prediction1TextView"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/prediction2ResultTextView"
+            android:layout_width="158dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="4dp"
+            android:width="170dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:text="N/A"
+            android:textSize="16sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/prediction2TextView"
+            app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName4"
+            app:layout_constraintTop_toTopOf="@+id/prediction2TextView"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/ensemblePredictionResultTextView"
+            android:layout_width="158dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="4dp"
+            android:width="170dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:text="N/A"
+            android:textSize="16sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/ensemblePredictionTextView"
+            app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName4"
+            app:layout_constraintTop_toTopOf="@+id/ensemblePredictionTextView"
+            app:layout_constraintVertical_bias="0.0" />
+
+
 
         <EditText
             android:id="@+id/editTextTextPersonName4"
@@ -195,13 +342,24 @@
             android:id="@+id/button"
             android:layout_width="110dp"
             android:layout_height="48dp"
-            android:layout_marginTop="64dp"
+            android:layout_marginTop="124dp"
             android:background="@drawable/round_button"
             android:text="Submit"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+            app:layout_constraintTop_toBottomOf="@+id/ensemblePredictionTextView" />
+        <Button
+            android:id="@+id/onpresspredict"
+            android:layout_width="110dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="124dp"
+            android:background="@drawable/round_button"
+            android:text="predict"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/prediction1TextView" />
 
         <TextView
             android:id="@+id/textView9"
