@@ -36,6 +36,15 @@ public class aftersignin extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        button = findViewById(R.id.help);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(aftersignin.this, help_iprules.class);
+                startActivity(intent);
+            }
+        });
+
 
         FloatingActionButton fab = findViewById(R.id.floatingActionButton);
         //fab.setOnClickListener(new View.OnClickListener() {
