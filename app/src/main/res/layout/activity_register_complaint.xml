@@ -75,17 +75,6 @@
             app:layout_constraintStart_toStartOf="@+id/textView"
             app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-        <TextView
-            android:id="@+id/textView5"
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:layout_marginTop="48dp"
-            android:paddingTop="5dp"
-            android:paddingBottom="5dp"
-            android:text="Additional Info"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@+id/textView6"
-            app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
 
 
@@ -332,24 +321,24 @@
             android:id="@+id/button"
             android:layout_width="110dp"
             android:layout_height="48dp"
-            android:layout_marginTop="124dp"
+            android:layout_marginTop="40dp"
             android:background="@drawable/round_button"
             android:text="Submit"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ensemblePredictionTextView" />
+            app:layout_constraintTop_toBottomOf="@+id/onpresspredict" />
         <Button
             android:id="@+id/onpresspredict"
             android:layout_width="110dp"
             android:layout_height="48dp"
-            android:layout_marginTop="124dp"
+            android:layout_marginTop="50dp"
             android:background="@drawable/round_button"
             android:text="predict"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/prediction1TextView" />
+            app:layout_constraintTop_toBottomOf="@+id/ensemblePredictionTextView" />
 
         <TextView
             android:id="@+id/textView9"

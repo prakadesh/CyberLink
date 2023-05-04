@@ -38,12 +38,12 @@ public class aftersignin extends AppCompatActivity {
         });
 
         FloatingActionButton fab = findViewById(R.id.floatingActionButton);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(aftersignin.this, chat_screen.class);
-                startActivity(intent);
-            }
-        });
+        //fab.setOnClickListener(new View.OnClickListener() {
+          //  @Override
+            //public void onClick(View view) {
+              //  Intent intent = new Intent(aftersignin.this, chat_screen.class);
+                //startActivity(intent);
+            //}
+        //});
     }
 }
