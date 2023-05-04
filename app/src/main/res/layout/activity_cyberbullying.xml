@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="1dp">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    tools:context=".Cyberbullying">
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="50dp"
+        android:paddingBottom="50dp"
+        android:text="Cyberbullying:
+Using electronic communication to harass, humiliate, or intimidate someone, particularly minors.
+
+Point 5 refers to the cyber crime of cyberbullying, which is not specifically defined under Indian law. However, cyberbullying may be considered as an offense under several provisions of the Indian Penal Code and the Indian Information Technology (IT) Act, 2000.
+
+Under Indian law, cyberbullying may be considered as an offense of defamation, which is defined under Section 499 of the Indian Penal Code. Defamation involves making false and malicious statements about an individual that harm their reputation or image. In the context of cyberbullying, this could involve making derogatory or offensive comments, posting embarrassing or private information, or sharing doctored images or videos of the victim on social media or other online platforms.
+
+Cyberbullying may also be considered as an offense under Section 66A of the Indian IT Act, which criminalized the sending of offensive or false messages through communication services. However, Section 66A was struck down by the Indian Supreme Court in 2015 as unconstitutional.
+
+In addition to these provisions, cyberbullying may also be considered as an offense of harassment, stalking, or threat under other sections of the Indian Penal Code and the Indian IT Act, depending on the nature and severity of the cyberbullying.
+"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

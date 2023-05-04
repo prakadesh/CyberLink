@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="1dp">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    tools:context=".Identity_theft">
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="50dp"
+        android:paddingBottom="50dp"
+        android:text="Identity theft:
+Using another person's identity, or creating a false identity, to commit a crime or to obtain a financial or other benefit.
+
+Point 4 refers to the cyber crime of identity theft, which is defined under Section 66C of the Indian Information Technology (IT) Act, 2000. Identity theft involves using someone else's identity, personal information or financial details without their consent or authorization.
+
+Under Indian law, identity theft is a criminal offense punishable with imprisonment and/or a fine. The punishment for identity theft depends on the severity of the offense and the harm caused to the victim. If the identity theft offense involves fraudulent use of someone's electronic signature, password, or other personal information, the punishment can be imprisonment for up to three years, a fine, or both. If the offense involves fraudulent use of someone's identity to commit an offense or to cause harm to the victim, the punishment can be imprisonment of up to seven years and a fine.
+
+In addition to criminal liability, an identity thief may also be liable for civil damages if they cause harm or loss to the victim. Victims of identity theft may be able to seek compensation for losses suffered as a result of the identity theft, such as unauthorized transactions, loss of funds, or damage to reputation.
+"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        tools:context=".Child_pornography">
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="50dp"
+            android:paddingBottom="50dp"
+            android:text="Child pornography:
+Creating, distributing or possessing explicit material involving children.
+
+Point 7 refers to the cyber crime of child pornography, which is a heinous and illegal activity under Indian law. Child pornography involves the creation, distribution, and possession of sexually explicit images or videos of children under the age of 18.
+
+Under Indian law, child pornography is considered a criminal offense under several provisions of the Indian Penal Code and the Protection of Children from Sexual Offences (POCSO) Act, 2012. Section 67B of the Indian IT Act also specifically criminalizes the publishing, transmitting, or causing to be published or transmitted, material that contains sexually explicit acts involving children.
+
+If a person is found guilty of creating, distributing, or possessing child pornography, they may be punished with imprisonment for a term ranging from three years to life, along with a fine. The punishment may be more severe if the offender is found to be involved in the trafficking or sexual exploitation of children.
+"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+

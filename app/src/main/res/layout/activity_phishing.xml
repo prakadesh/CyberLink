@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        tools:context=".Phishing">
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="50dp"
+            android:paddingBottom="50dp"
+            android:text="Phishing:
+Using fraudulent methods to obtain sensitive information like bank account details, credit card information, or passwords.
+
+Point 2 refers to the cyber crime of phishing, which is defined under Section 66D of the Indian Information Technology (IT) Act, 2000. Phishing involves using fraudulent methods to obtain sensitive information like bank account details, credit card information, or passwords.
+
+Under Indian law, phishing is a criminal offense punishable with imprisonment and/or a fine. The punishment for phishing depends on the severity of the offense and the harm caused to the victim. If the phishing offense results in financial loss to the victim, the punishment can be imprisonment for up to three years, a fine of up to one lakh rupees, or both. If the offense involves fraudulent use of electronic signature or identity theft, the punishment can be imprisonment of up to seven years, a fine of up to five lakh rupees, or both.
+
+In addition to criminal liability, a phishing offender may also be liable for civil damages if they cause harm or loss to the victim. Victims of phishing may be able to seek compensation for losses suffered as a result of the phishing attack, such as unauthorized transactions or loss of funds.
+"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

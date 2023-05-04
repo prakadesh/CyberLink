@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        tools:context=".Hacking">
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="50dp"
+            android:paddingBottom="50dp"
+            android:text="Hacking:
+Unauthorized access to a computer system or network, or modifying computer data without permission.
+
+Point 1 refers to the cyber crime of hacking, which is defined under Section 66 of the Indian Information Technology (IT) Act, 2000. Hacking involves unauthorized access to a computer system or network or modifying computer data without permission.
+Under Indian law, hacking is a criminal offense punishable with imprisonment and/or a fine. The punishment for hacking depends on the severity of the offense and the harm caused by the hacker. For example, if a hacker causes damage to a computer system or network, they may be punished with imprisonment for up to three years, a fine of up to two lakh rupees, or both. If the offense is more serious, the punishment can be imprisonment of up to 10 years and a fine of up to five lakh rupees.
+In addition to criminal liability, a hacker may also be liable for civil damages if they cause harm or loss to the victim. Victims of hacking may be able to seek compensation for losses suffered as a result of the hacking, such as loss of data, loss of business, or damage to reputation.
+"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

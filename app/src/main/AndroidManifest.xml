@@ -12,6 +12,30 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Cypics">
         <activity
+            android:name=".Cyber_terrorism"
+            android:exported="false" />
+        <activity
+            android:name=".Child_pornography"
+            android:exported="false" />
+        <activity
+            android:name=".Online_defamation"
+            android:exported="false" />
+        <activity
+            android:name=".Cyberbullying"
+            android:exported="false" />
+        <activity
+            android:name=".Identity_theft"
+            android:exported="false" />
+        <activity
+            android:name=".Cyberstalking"
+            android:exported="false" />
+        <activity
+            android:name=".Phishing"
+            android:exported="false" />
+        <activity
+            android:name=".Hacking"
+            android:exported="false" />
+        <activity
             android:name=".help_iprules"
             android:exported="false" />
         <activity
