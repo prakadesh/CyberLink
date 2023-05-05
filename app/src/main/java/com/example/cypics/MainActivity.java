@@ -8,26 +8,26 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-    Button button;
+    Button b1, b2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         getSupportActionBar().hide();
-        button = findViewById(R.id.button2);
-        button.setOnClickListener(new View.OnClickListener() {
+        b1 = findViewById(R.id.button2);
+        b2 = findViewById(R.id.button3);
+        b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, anonymousActivity.class);
+                Intent intent = new Intent(MainActivity.this, SignupActivity.class);
                 startActivity(intent);
             }
         });
-        button = findViewById(R.id.button3);
-        button.setOnClickListener(new View.OnClickListener() {
+        b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, aftersignin.class);
-                startActivity(intent);
+                Intent i = new Intent(MainActivity.this,LoginActivity.class);
+                startActivity(i);
             }
         });
     }

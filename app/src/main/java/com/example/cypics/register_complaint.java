@@ -5,12 +5,17 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.DatePickerDialog;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.text.TextWatcher;
 import android.text.Editable;
+import android.widget.Toast;
+
 import com.android.volley.*;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
@@ -20,10 +25,14 @@ import org.json.*;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
-public class register_complaint extends AppCompatActivity {
+public class register_complaint extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     EditText dateformat;
+    EditText e1,e2,e3,e4,e5;
     EditText editText;
-    Button button;
+    Button b1;
+    Spinner s1;
+    String[] ss1 = {"Ministry of Home Affairs", "Indian Cybercrime Coordination Center"};
+    ArrayAdapter aa;
     int year, month, day;
     TextView predictionTextView;
     TextView prediction1TextView;
@@ -41,7 +50,44 @@ public class register_complaint extends AppCompatActivity {
 
         dateformat = findViewById(R.id.dateformatID);
         editText = findViewById(R.id.editTextpredict);
-        button = findViewById(R.id.onpresspredict);
+        b1 = findViewById(R.id.onpresspredict);
+        s1 = findViewById(R.id.spinner);
+        b1 = findViewById(R.id.button);
+        e1 = findViewById(R.id.editTextTextPersonName);
+        e2 = findViewById(R.id.editTextTextPersonName2);
+        e3 = findViewById(R.id.editTextTextPersonName3);
+        e4 = findViewById(R.id.editTextTextPersonName4);
+        e5 = findViewById(R.id.editTextTextMultiLine);
+
+        s1 = findViewById(R.id.spinner);
+
+        s1.setOnItemSelectedListener(this);
+        aa = new ArrayAdapter(this, android.R.layout.simple_spinner_item,ss1);
+        aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        s1.setAdapter(aa);
+
+        b1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String a1 = e1.getText().toString();
+                String b1 = e2.getText().toString();
+                String c1 = e3.getText().toString();
+                String d1 = e4.getText().toString();
+                String f1 = e5.getText().toString();
+
+                if(a1.equals("") || b1.equals("") || c1.equals("") || d1.equals("") || f1.equals("")){
+                    Toast.makeText(register_complaint.this, "Please fill all the details.", Toast.LENGTH_SHORT).show();
+                }else{
+                    Toast.makeText(register_complaint.this, "Complaint sent successfully.", Toast.LENGTH_SHORT).show();
+                    e1.setText("");
+                    e2.setText("");
+                    e3.setText("");
+                    e4.setText("");
+                    e5.setText("");
+                }
+            }
+        });
+
 
         predictionTextView = findViewById(R.id.predictionTextView);
         prediction1TextView = findViewById(R.id.prediction1TextView);
@@ -72,7 +118,7 @@ public class register_complaint extends AppCompatActivity {
             ensemblePredictionResultTextView.setVisibility(View.VISIBLE);
         }
         // Set an OnClickListener for the button
-        button.setOnClickListener(new View.OnClickListener() {
+        b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 // Get the user input from the EditText view
@@ -137,7 +183,7 @@ public class register_complaint extends AppCompatActivity {
                 Volley.newRequestQueue(register_complaint.this).add(request);
 
                 // Disable the button initially
-                button.setEnabled(false);
+                b1.setEnabled(false);
 
                 // Add text change listener to the EditText
                 editText.addTextChangedListener(new TextWatcher() {
@@ -150,10 +196,10 @@ public class register_complaint extends AppCompatActivity {
                         // Check if EditText is empty or not
                         if (editText.getText().toString().trim().isEmpty()) {
                             // Disable the Button if EditText is empty
-                            button.setEnabled(false);
+                            b1.setEnabled(false);
                         } else {
                             // Enable the Button if EditText is not empty
-                            button.setEnabled(true);
+                            b1.setEnabled(true);
                         }
                     }
 
@@ -162,27 +208,51 @@ public class register_complaint extends AppCompatActivity {
                     }
                 });
 
-                Calendar calendar = Calendar.getInstance();
-                dateformat.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        year = calendar.get(Calendar.YEAR);
-                        month = calendar.get(Calendar.MONTH);
-                        day = calendar.get(Calendar.DAY_OF_MONTH);
-                        DatePickerDialog datePickerDialog = new DatePickerDialog(register_complaint.this, new DatePickerDialog.OnDateSetListener() {
-                            @Override
-                            public void onDateSet(DatePicker datePicker, int year, int month, int day) {
-
-                                //Showing the picked value in the textView
-                                dateformat.setText(String.valueOf(year) + "." + String.valueOf(month + 1) + "." + String.valueOf(day));
-
-
-                            }
-                        }, 2023, 01, 20);
-                        datePickerDialog.show();
-                    }
-                });
             }
         });
+        dateformat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // on below line we are getting
+                // the instance of our calendar.
+                final Calendar c = Calendar.getInstance();
+
+                // on below line we are getting
+                // our day, month and year.
+                int year = c.get(Calendar.YEAR);
+                int month = c.get(Calendar.MONTH);
+                int day = c.get(Calendar.DAY_OF_MONTH);
+
+                // on below line we are creating a variable for date picker dialog.
+                DatePickerDialog datePickerDialog = new DatePickerDialog(
+                        // on below line we are passing context.
+                        register_complaint.this,
+                        new DatePickerDialog.OnDateSetListener() {
+                            @Override
+                            public void onDateSet(DatePicker view, int year,
+                                                  int monthOfYear, int dayOfMonth) {
+                                // on below line we are setting date to our edit text.
+                                dateformat.setText(dayOfMonth + "-" + (monthOfYear + 1) + "-" + year);
+
+                            }
+                        },
+                        // on below line we are passing year,
+                        // month and day for selected date in our date picker.
+                        year, month, day);
+                // at last we are calling show to
+                // display our date picker dialog.
+                datePickerDialog.show();
+            }
+        });
+    }
+
+    @Override
+    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> adapterView) {
+
     }
 }
