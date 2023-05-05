@@ -30,6 +30,7 @@ public class register_complaint extends AppCompatActivity implements AdapterView
     EditText e1,e2,e3,e4,e5;
     EditText editText;
     Button b1;
+    Button b2;
     Spinner s1;
     String[] ss1 = {"Ministry of Home Affairs", "Indian Cybercrime Coordination Center"};
     ArrayAdapter aa;
@@ -42,6 +43,7 @@ public class register_complaint extends AppCompatActivity implements AdapterView
     TextView ensemblePredictionTextView;
     TextView ensemblePredictionResultTextView;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,7 +52,7 @@ public class register_complaint extends AppCompatActivity implements AdapterView
 
         dateformat = findViewById(R.id.dateformatID);
         editText = findViewById(R.id.editTextpredict);
-        b1 = findViewById(R.id.onpresspredict);
+        b2 = findViewById(R.id.onpresspredict);
         s1 = findViewById(R.id.spinner);
         b1 = findViewById(R.id.button);
         e1 = findViewById(R.id.editTextTextPersonName);
@@ -118,7 +120,7 @@ public class register_complaint extends AppCompatActivity implements AdapterView
             ensemblePredictionResultTextView.setVisibility(View.VISIBLE);
         }
         // Set an OnClickListener for the button
-        b1.setOnClickListener(new View.OnClickListener() {
+        b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 // Get the user input from the EditText view
@@ -183,7 +185,7 @@ public class register_complaint extends AppCompatActivity implements AdapterView
                 Volley.newRequestQueue(register_complaint.this).add(request);
 
                 // Disable the button initially
-                b1.setEnabled(false);
+                b2.setEnabled(false);
 
                 // Add text change listener to the EditText
                 editText.addTextChangedListener(new TextWatcher() {
@@ -196,10 +198,10 @@ public class register_complaint extends AppCompatActivity implements AdapterView
                         // Check if EditText is empty or not
                         if (editText.getText().toString().trim().isEmpty()) {
                             // Disable the Button if EditText is empty
-                            b1.setEnabled(false);
+                            b2.setEnabled(false);
                         } else {
                             // Enable the Button if EditText is not empty
-                            b1.setEnabled(true);
+                            b2.setEnabled(true);
                         }
                     }
 
