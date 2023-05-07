@@ -17,25 +17,60 @@
             android:id="@+id/textView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingTop="50dp"
-            android:paddingBottom="50dp"
-            android:text="Cyberstalking:
-Using the internet or other forms of electronic communication to harass, threaten, or intimidate someone.
-
-Point 3 refers to the cyber crime of cyber stalking, which is defined under Section 354D of the Indian Penal Code and Section 66E of the Indian Information Technology (IT) Act, 2000. Cyber stalking involves using the internet or other electronic communication devices to repeatedly harass or threaten an individual, causing fear or emotional distress.
-
-Under Indian law, cyber stalking is a criminal offense punishable with imprisonment and/or a fine. The punishment for cyber stalking depends on the severity of the offense and the harm caused to the victim. If the cyber stalking offense involves the transmission of sexually explicit material, the punishment can be imprisonment for up to three years, a fine, or both. If the offense involves causing fear or emotional distress to the victim, the punishment can be imprisonment of up to three years and a fine.
-
-In addition to criminal liability, a cyber stalker may also be liable for civil damages if they cause harm or loss to the victim. Victims of cyber stalking may be able to seek compensation for losses suffered as a result of the cyber stalking, such as loss of employment opportunities, damage to reputation, or emotional distress.
-"
+            android:layout_marginTop="16dp"
+            android:paddingTop="25dp"
+            android:paddingBottom="10dp"
+            android:text="Cyberstalking:  Using the internet or other forms of electronic communication to harass, threaten, or intimidate someone. "
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.526"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintTop_toTopOf="parent" />
 
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:paddingTop="25dp"
+            android:paddingBottom="5dp"
+            android:text="Point 3 refers to the cyber crime of cyber stalking, which is defined under Section 354D of the Indian Penal Code and Section 66E of the Indian Information Technology (IT) Act, 2000. Cyber stalking involves using the internet or other electronic communication devices to repeatedly harass or threaten an individual, causing fear or emotional distress."
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.473"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView1" />
 
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:paddingTop="25dp"
+            android:paddingBottom="5dp"
+            android:text="Under Indian law, cyber stalking is a criminal offense punishable with imprisonment and/or a fine. The punishment for cyber stalking depends on the severity of the offense and the harm caused to the victim. If the cyber stalking offense involves the transmission of sexually explicit material, the punishment can be imprisonment for up to three years, a fine, or both. If the offense involves causing fear or emotional distress to the victim, the punishment can be imprisonment of up to three years and a fine."
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.473"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:paddingTop="25dp"
+            android:paddingBottom="5dp"
+            android:text="In addition to criminal liability, a cyber stalker may also be liable for civil damages if they cause harm or loss to the victim. Victims of cyber stalking may be able to seek compensation for losses suffered as a result of the cyber stalking, such as loss of employment opportunities, damage to reputation, or emotional distress."
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.473"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
