@@ -52,9 +52,6 @@
             android:name=".help_iprules"
             android:exported="false" />
         <activity
-            android:name=".MessageListActivity"
-            android:exported="false" />
-        <activity
             android:name=".track"
             android:exported="false" />
         <activity
