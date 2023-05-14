@@ -1,9 +1,10 @@
 package com.example.cypics;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.DatePickerDialog;
 import android.os.Bundle;
+import android.os.Handler;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -12,17 +13,21 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.text.TextWatcher;
-import android.text.Editable;
 import android.widget.Toast;
 
-import com.android.volley.*;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.android.volley.DefaultRetryPolicy;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 
-import org.json.*;
+import org.json.JSONException;
+import org.json.JSONObject;
 
-import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 public class register_complaint extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
@@ -72,8 +77,14 @@ public class register_complaint extends AppCompatActivity implements AdapterView
         s1.setAdapter(aa);
 
         b1.setOnClickListener(new View.OnClickListener() {
+            private boolean buttonClicked = false;
+            private static final long BUTTON_CLICK_DELAY = 1000; // 1 second delay
             @Override
             public void onClick(View view) {
+                if (buttonClicked) {
+                    return; // do nothing if button is already clicked
+                }
+                buttonClicked = true;
                 String a1 = e1.getText().toString();
                 String b1 = e2.getText().toString();
                 String c1 = e3.getText().toString();
@@ -90,6 +101,12 @@ public class register_complaint extends AppCompatActivity implements AdapterView
                     e4.setText("");
                     e5.setText("");
                 }
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        buttonClicked=false;
+                    }
+                },BUTTON_CLICK_DELAY);
             }
         });
 
@@ -133,7 +150,7 @@ public class register_complaint extends AppCompatActivity implements AdapterView
                     if (response != null && response.getInt("status") == 405) {
                         serverStatusTextView.setBackgroundColor(getResources().getColor(android.R.color.holo_green_light));
                     } else {
-                        serverStatusTextView.setBackgroundColor(getResources().getColor(android.R.color.holo_red_light));
+                        serverStatusTextView.setVisibility(View.GONE);
                     }
                 } catch (JSONException e) {
                     throw new RuntimeException(e);
