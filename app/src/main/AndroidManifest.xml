@@ -15,6 +15,9 @@
         android:theme="@style/Theme.Cypics"
         tools:ignore="HardcodedDebugMode">
         <activity
+            android:name=".Complaint_success"
+            android:exported="false" />
+        <activity
             android:name=".verifyphone"
             android:exported="false" />
         <activity

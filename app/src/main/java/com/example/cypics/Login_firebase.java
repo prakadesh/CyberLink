@@ -33,6 +33,9 @@ public class Login_firebase extends AppCompatActivity {
     private FirebaseAuth authprofile;
     private boolean isLoginButtonEnabled = true;
 
+    private LoginProgressDialog mProgressDialog;
+
+
 
 
     @Override
@@ -40,6 +43,7 @@ public class Login_firebase extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         getSupportActionBar().hide();
+        mProgressDialog = new LoginProgressDialog(this);
         email_login = (EditText) findViewById(R.id.username1);
         password_login = (EditText) findViewById(R.id.password1);
         forgotpass=findViewById(R.id.forgotpass);
@@ -56,7 +60,7 @@ public class Login_firebase extends AppCompatActivity {
                     password_login.setTransformationMethod(PasswordTransformationMethod.getInstance());
                     //change icon
                     imageViewshowhidepwd.setImageResource(R.drawable.ic_hide_pwd);
-                }else {
+                } else {
                     password_login.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
                     imageViewshowhidepwd.setImageResource(R.drawable.ic_show_pwd);
                 }
@@ -78,6 +82,7 @@ public class Login_firebase extends AppCompatActivity {
         btnlogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mProgressDialog.showProgress();
                 if (isLoginButtonEnabled){
                     isLoginButtonEnabled=false;
                     String textEmail=email_login.getText().toString();
@@ -87,17 +92,22 @@ public class Login_firebase extends AppCompatActivity {
                         Toast.makeText(Login_firebase.this, "Please enter your email id", Toast.LENGTH_SHORT).show();
                         email_login.setError("email is required");
                         email_login.requestFocus();
+                        mProgressDialog.hideProgress();
                     } else if (!Patterns.EMAIL_ADDRESS.matcher(textEmail).matches()) {
                         Toast.makeText(Login_firebase.this, "Re-enter your email id ", Toast.LENGTH_SHORT).show();
                         email_login.setError("Enter a valid email id ");
                         email_login.requestFocus();
+                        mProgressDialog.hideProgress();
                     } else if (TextUtils.isEmpty(textpwd)) {
                         Toast.makeText(Login_firebase.this, "Please enter your password ", Toast.LENGTH_SHORT).show();
                         password_login.setError("Password is Required");
                         password_login.requestFocus();
+                        mProgressDialog.hideProgress();
                     }else {
+                        mProgressDialog.hideProgress();
                         //progress bar logic
                         Loginuser(textEmail,textpwd);
+
                     }
                     //disable button for 2 sec
                     new Handler().postDelayed(
@@ -128,8 +138,7 @@ public class Login_firebase extends AppCompatActivity {
                         Intent i = new Intent(Login_firebase.this,aftersignin.class);
                         startActivity(i);
                     }else {
-                        firebaseUser.sendEmailVerification();
-                        authprofile.signOut(); //sign off the user
+                        //sign off the user
                         showalertdialog();
                     }
 

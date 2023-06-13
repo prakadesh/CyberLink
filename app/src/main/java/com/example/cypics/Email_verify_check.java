@@ -4,8 +4,6 @@ import androidx.annotation.NonNull;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.messaging.FirebaseMessaging;
-import com.google.firebase.messaging.RemoteMessage;
 
 public class Email_verify_check {
     public static void addAuthStateListener() {
@@ -25,10 +23,10 @@ public class Email_verify_check {
         // Code to send push notification
         // You can use Firebase Cloud Messaging (FCM) to send notifications to your app
         // Here's an example code to send a notification using FCM:
-        FirebaseMessaging.getInstance().send(new RemoteMessage.Builder(FCM_SENDER_ID + "@fcm.googleapis.com")
+        /*///FirebaseMessaging.getInstance().send(new RemoteMessage.Builder(FCM_SENDER_ID + "@fcm.googleapis.com")
                 .setMessageId(Integer.toString(messageId))
                 .addData("title", "My Title")
                 .addData("body", "My notification message.")
                 .setToken(token)
-                .build());
+                .build());*/
 }}
