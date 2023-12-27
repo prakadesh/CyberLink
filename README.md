@@ -64,5 +64,15 @@ users to track the progress of their complaint using the tracking number.
 ### Chatbot
 ![Chatbot_blured](https://github.com/prakadesh/CyberLink/assets/84655612/b55edbe0-7c3f-42df-9b47-f2acaacdc5d6)
 
-## Contributors
+## Contributors Table
+
+| Name                   | Role                                               | GitHub Profile                                   |
+|------------------------|----------------------------------------------------|--------------------------------------------------|
+| Prakadesh              | Dialogflow Integration, ML Model Build and Deploy, App Backend | [GitHub](https://github.com/prakadesh)     |
+| M. Pon Dinesh Kumar    |  Data Analysis and Research                                    | [GitHub](https://github.com/Pon-Dinesh-kumar) |
+| Gurusaran              | Dialogflow Developer                               | [GitHub](https://github.com/Gurusaran6)            |
+| Sundar                 | Data Analysis and Research                         | [GitHub](https://github.com/Sundar-2503)               |
+| <!-- Shibin -->        | <!-- Front-end Developer -->                       | <!-- [GitHub](https://github.com/shibin) -->       |
+
+
 
