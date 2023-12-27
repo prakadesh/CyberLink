@@ -5,7 +5,7 @@ In the ever-evolving landscape of the digital age, the prevalence of cybercrime 
 
 ## Introduction
 
-CyberLink stands as a beacon of empowerment, providing a user-friendly platform for reporting various cybercrimes—from hacking and phishing to identity theft and cyberstalking. This innovative app transcends technical barriers, allowing users of all expertise levels to report incidents promptly. Fueled by the vision of a Digital India, CyberLink is positioned to bring the cyber-crime reporting facility directly into the hands of every citizen.
+CyberLink stands as a beacon of empowerment, providing a user-friendly platform for reporting various cybercrimes from hacking and phishing to identity theft and cyberstalking. This innovative app transcends technical barriers, allowing users of all expertise levels to report incidents promptly. Fueled by the vision of a Digital India, CyberLink is positioned to bring the cyber-crime reporting facility directly into the hands of every citizen.
 
 ## Motivation
 
